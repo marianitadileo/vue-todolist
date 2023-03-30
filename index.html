@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <header>
+            <img src="img/logo.png" alt="logo">
+            <h1>TO DO LIST</h1>
+        </header>
+
+        <main>
+            <div class="new-input">
+                <p class="error" v-show="showError">Errore!! Inserisci un elemento! </p>
+                <input type="text" class="input" placeholder="Aggiungi un nuovo elemento" v-model.trim="newToDo" @keyup.enter="addBtn">
+                <button class="btn" @click="addBtn">Aggiungi</button>
+            </div>
+
+            <div class="list-elem">
+                <ul class="to-do-list" v-if="list.length > 0" >
+                    <li v-for="todo in list">
+                        <p v-if="todo.done">{{ todo.text}}</p>
+                        <p v-else>{{ todo.text }}</p>
+                        <span class="cross" @click="remove">&cross;</span>                           
+                    </li>
+
+                </ul>
+                <div class="end-list" v-else>
+                    <h3>Per oggi hai finito le cose da fare!</h3>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

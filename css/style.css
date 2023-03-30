@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    margin-top: 1rem;
+}
+
+img {
+    height: 100px;
+}
+
+main {
+    width: 60%;
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.list-elem {
+    margin-top: 2rem;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+
+.cross {
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.to-do-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    border-bottom: 1px solid black;
+}
+
+.input {
+    padding: 0.5rem;
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+}
+
+.line {
+    text-decoration: line-through;
+    color: red;
+}
