@@ -38,7 +38,12 @@ createApp({
 
                 this.showError = false;
                 this.newToDo = this.newToDo[0].toUpperCase() + this.newToDo.substring(1);
-                this.list.unshift(this.newToDo);
+
+                this.list.unshift({
+                    text: this.newToDo,
+                    done: false
+                });
+                
                 this.newToDo = "";
             
             } else {
